@@ -19,7 +19,7 @@ object Spark {
 	//val SPARK_SERVER_ADDRESS = "spark://Spark1:7023"
 	val SPARK_SERVER_ADDRESS = "local[8]"
 	val APPLICATION_NAME ="Spark demo"
-	val JAR_PATH ="/media/root/12e01f38-d1e1-449d-933f-b27473571811/home/mbenabdelkerim/Desktop/Tasks/SparkWorkSpace/Projects/FirstMeetWithSpark/target/scala-2.10/spark-play-activator_2.10-0.0.1.jar"
+	val JAR_PATH ="/media/application.jar"
 
 	val conf = new SparkConf()
 			.setMaster(SPARK_SERVER_ADDRESS)
