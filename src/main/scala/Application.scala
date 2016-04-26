@@ -8,8 +8,8 @@ import scala.util.Try
 
 object Application {
 
-	val CSV_FOLDER = "/media/root/12e01f38-d1e1-449d-933f-b27473571811/tempData/sparkDemo/csv/"
-	val PQ_FOLDER = "/media/root/12e01f38-d1e1-449d-933f-b27473571811/tempData/sparkDemo/pq/"
+	val CSV_FOLDER = "/media/tempData/sparkDemo/csv/"
+	val PQ_FOLDER = "/media/tempData/sparkDemo/pq/"
 	val START_DAY = "2016-01-01"
 	val END_DAY = "2016-01-03"
 
@@ -84,9 +84,9 @@ object Application {
 		var result = ""
 		try {
 
-			//val daysToRead = this.getDaysBetween(START_DAY,END_DAY).map(day => PQ_FOLDER+day+".pq").toArray[String]
-			//val df = Spark.multipleParquetToDf(daysToRead)
-			val df = Spark.parquetToDf(PQ_FOLDER+"2016-01-01.pq")
+			val daysToRead = this.getDaysBetween(START_DAY,END_DAY).map(day => PQ_FOLDER+day+".pq").toArray[String]
+			val df = Spark.multipleParquetToDf(daysToRead)
+			//val df = Spark.parquetToDf(PQ_FOLDER+"2016-01-01.pq")
 			Spark.registerTempTable(df,TABLE_NAME)
 
 			val resultDf = Spark.sql(sqlQuery)
