@@ -8,10 +8,11 @@ import scala.util.Try
 
 object Application {
 
-	val CSV_FOLDER = "/media/tempData/sparkDemo/csv/"
-	val PQ_FOLDER = "/media/tempData/sparkDemo/pq/"
+	val CSV_FOLDER = "/media/tempData/csv/"
+	val PQ_FOLDER = "/media/tempData/pq/"
+
 	val START_DAY = "2016-01-01"
-	val END_DAY = "2016-01-03"
+	val END_DAY = "2016-01-30"
 
 	val NB_ROWS_PER_DAY = 27*1000*1000
 
@@ -45,7 +46,18 @@ object Application {
 						.append(r.nextInt(10)).append(",")
 						.append((r.nextInt(999)+1)/10.0).append(",")
 						.append(r.nextInt(1000)).append(",")
-						.append(r.nextBoolean())
+						.append(r.nextBoolean()).append(",")
+						.append(r.nextInt(1000)).append(",")
+						.append(r.nextInt(1000)).append(",")
+						.append(r.nextInt(1000)).append(",")
+						.append(r.nextInt(1000)).append(",")
+						.append(r.nextInt(1000)).append(",")
+						.append(r.nextInt(1000)).append(",")
+						.append(r.nextInt(1000)).append(",")
+						.append(r.nextInt(1000)).append(",")
+						.append(r.nextInt(1000)).append(",")
+						.append(r.nextInt(1000))
+
 				bw.write(rowData.toString)
 				if (i < NB_ROWS_PER_DAY) {
 					bw.write("\n")

@@ -53,7 +53,17 @@ object Spark {
 						e(5).toInt,
 						e(6).toFloat,
 						e(7).toInt,
-						e(8).toBoolean
+						e(8).toBoolean,
+						e(9).toInt,
+						e(10).toInt,
+						e(11).toInt,
+						e(12).toInt,
+						e(13).toInt,
+						e(14).toInt,
+						e(15).toInt,
+						e(16).toInt,
+						e(17).toInt,
+						e(18).toInt
 					)
 				)
 		return rdd.toDF()
